@@ -1,0 +1,112 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(122, 121, 121);
+}
+header{
+    height: 4.2rem;
+    background-color: red;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+#wrapper{
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-inline:3.5rem;
+}
+.logo img{
+    height: 69px;
+}
+.cart img{
+    background-color: red;
+    color: white;
+    height: 95%;
+}
+.counter{
+    position: absolute;
+    top: 0;
+    right: -10px;
+    padding: 4px 8px;
+    background-color: green;
+    color: white;
+    border: 1px solid ;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 50%; 
+}
+#root{
+    display:grid;
+    grid-template-columns:repeat(4,auto);
+    gap:1rem;
+    
+}
+#main-wrapper{
+    margin-top: 4.2rem;
+    background-color: rgb(165, 47, 47);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.grid{
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+    
+}
+.grid p{
+    font-weight: bold;
+    margin-left: 8px;
+}
+.grid img{
+    object-fit: contain;
+    height: 300px;
+    width: 300px;
+}
+.Btn{
+    margin-top: .5rem;
+    padding: .8rem 2rem;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(102, 171, 173);
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+@media(max-width:600px ){
+
+    #root{
+        width: 100%;
+        display: block;
+        /* flex-direction: column; */
+        /* padding: rem; */
+        /* margin: 10px; */
+    }
+    #main-wrapper{
+        width: 94%;
+        margin-inline: auto;
+    }
+    .grid{
+        display: flex;
+        flex-direction: column;
+        margin-block: 1rem;
+    }
+    .grid img{
+        width: 100%;
+    }
+   
+}
